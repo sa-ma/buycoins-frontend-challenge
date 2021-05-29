@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="github profile search">
+  <link rel="stylesheet" href="style.css">
+  <title>GitHub User Search</title>
+</head>
+
+<body>
+  <div class="site" id="top">
+    <header class="site__header px-1">
+      <button aria-label="menu" class="site__header__menu site__header__btn site__header__btn--three-bars toggleBtn">
+        <svg class="site__header__icon site__header__icon--three-bars" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 16 16" width="16" height="16">
+          <path fill-rule="evenodd"
+            d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+      <div class="order-0 site__header__logo mr-1">
+        <a href="/" class="site__header__logo__link" title="site logo">
+          <svg class="site__header__icon site__header__icon--logo" height="32" viewBox="0 0 16 16" version="1.1"
+            width="32" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+            </path>
+          </svg>
+        </a>
+      </div>
+      <nav class="site__header__nav mr-2">
+        <div class="site__header__nav__link">
+          <div class="site__header__search">
+            <input class="site__header__search__input" type="text" placeholder="Search or jump to..."
+              aria-label="Search or jump to...">
+            <span class="site__header__search__icon">/</span>
+          </div>
+        </div>
+        <a class="site__header__nav__link" href="#top">Pull<span class="d-none d-md-inline d-lg-none">s</span> <span
+            class="d-inline d-md-none d-lg-inline">requests</span></a>
+        <a class="site__header__nav__link" href="#top">Issues</a>
+        <a class="site__header__nav__link" href="#top">Marketplace</a>
+        <a class="site__header__nav__link" href="#top">Explore</a>
+      </nav>
+
+    </header>
+    <main class="site__main">
+      <div class="site__main__wrapper site__main__wrapper--alt">
+        <form class="site__form" action="search.html" method="GET">
+          <div class="form-control">
+            <input class="site__form__input" name="username" aria-label="username" type="text"
+              placeholder="Search for username" type="search" required>
+            <button class="site__form__btn" type="submit">Search</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="site__footer site__footer--bottom">
+      <div class="site__footer__section">
+        <span class="site__footer__item">&copy; 2021 Github, Inc</span>
+        <a class="site__footer__item site__link " href="#top">Terms</a>
+        <a class="site__footer__item site__link " href="#top">Privacy</a>
+        <a class="site__footer__item site__link " href="#top">Security</a>
+        <a class="site__footer__item site__link " href="#top">Status</a>
+        <a class="site__footer__item site__link " href="#top">Docs</a>
+      </div>
+
+      <div class="site__footer__section--logo">
+        <a class="site__footer__logo-link" title="site logo" href="/"> <svg
+            class="site__footer__item site__footer__logo" height="32" viewBox="0 0 16 16" version="1.1" width="32"
+            aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+            </path>
+          </svg>
+        </a>
+      </div>
+
+      <div class="site__footer__section">
+        <a class="site__footer__item site__link " href="#top">Contact GitHub</a>
+        <a class="site__footer__item site__link " href="#top">Pricing</a>
+        <a class="site__footer__item site__link " href="#top">API</a>
+        <a class="site__footer__item site__link " href="#top">Training</a>
+        <a class="site__footer__item site__link " href="#top">Blog</a>
+        <a class="site__footer__item site__link " href="#top">About</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
