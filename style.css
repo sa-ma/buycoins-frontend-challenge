@@ -278,9 +278,9 @@ a {
   padding: 0.5rem 1rem;
   border: 0;
   outline: none;
-  color: var(--color-white);
+  color: var(--color-primary);
   flex: 2;
-  transition: all 0.2s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 .site__header__search__icon {
   border: var(--site-header-search-border);

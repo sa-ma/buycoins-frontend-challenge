@@ -327,6 +327,8 @@ if (window.location.pathname === '/search.html') {
 
   async function fetchData() {
     try {
+      const site = document.querySelector('.site');
+      site.style.display = 'none';
       const response = await fetch('https://api.github.com/graphql', options);
       const { data, errors } = await response.json();
       if (errors) {
@@ -338,6 +340,7 @@ if (window.location.pathname === '/search.html') {
         return;
       }
       templateBuilder(data);
+      site.style.display = 'block';
       return;
     } catch (error) {
       console.log(error);
