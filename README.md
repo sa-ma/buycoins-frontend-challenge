@@ -12,12 +12,20 @@ A recreation of the github profile page (the tab that lists a user's repositorie
 
 ## Installation Instructions
 
-- Clone the repo
+1.  Clone the repo
+
 ```
 git clone https://github.com/sa-ma/buycoins-frontend-challenge.git
 ```
-- Navigate to the directory
+
+2. Navigate to the directory
+
 ```
 cd buycoins-frontend-challenge
 ```
-- Launch the `index.html` file in a browser
+
+3. Launch the `index.html` file in a browser
+
+## Notes
+
+The GitHub personal token used in this project is gotten from a cloud function deployed from this [repo](https://github.com/sa-ma/github-oauth-api).

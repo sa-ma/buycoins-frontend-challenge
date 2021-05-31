@@ -315,7 +315,7 @@ if (window.location.pathname === '/search.html') {
     try {
       const site = document.querySelector('.site');
       site.style.display = 'none';
-      // Make request to a firebase serveless function to retrieve GitHub personal access token
+      // Make request to a firebase cloud function to retrieve GitHub personal access token
       const getToken = await fetch(
         'https://us-central1-playground-47feb.cloudfunctions.net/app/api/oauth'
       );
