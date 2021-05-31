@@ -310,25 +310,26 @@ if (window.location.pathname === '/search.html') {
 }
 `;
   }
-  // Break token to stop github token check
-  const tokenPart1 = 'ghp_GVvkU8jUzo5omz';
-  const tokenPart2 = 'dOcTR8dkvHjEDplo1fp1CP';
-  const token = `${tokenPart1}${tokenPart2}`;
-  const options = {
-    method: 'post',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    },
-    body: JSON.stringify({
-      query: getDataQuery(username),
-    }),
-  };
 
   async function fetchData() {
     try {
       const site = document.querySelector('.site');
       site.style.display = 'none';
+      // Make request to a firebase serveless function to retrieve GitHub personal access token
+      const getToken = await fetch(
+        'https://us-central1-playground-47feb.cloudfunctions.net/app/api/oauth'
+      );
+      const { message: token } = await getToken.json();
+      const options = {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          query: getDataQuery(username),
+        }),
+      };
       const response = await fetch('https://api.github.com/graphql', options);
       const { data, errors } = await response.json();
       if (errors) {
